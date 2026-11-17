@@ -67,7 +67,39 @@ def descargar_owid_co2():
     print(f"   [ERROR] No se pudo descargar OWID. Motivo: {error}")
     return False
 
+def descargar_temp_noaa():
+    """Función para descargar la temperatura global de la NOAA (NCEI)"""
+    
+    url = "https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/global/time-series/globe/land_ocean/1/0/1850-2025.csv"
+    nombre_archivo = "noaa_temp_global_anual.csv"
+    
+    carpeta_destino = "emisiones_data"
+    ruta_carpeta = Path(carpeta_destino)
+    ruta_carpeta.mkdir(exist_ok=True)
+    
+    ruta_archivo = ruta_carpeta / nombre_archivo
+    
+    # Cabecera necesaria para que el servidor NCEI no rechace la conexión por script
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    }
+    
+    print("Iniciando la descarga del archivo de temperatura de la NOAA...")
 
+    try:
+        respuesta = requests.get(url, headers=headers, stream=True, timeout=30)
+        respuesta.raise_for_status()
+
+        with open(ruta_archivo, "wb") as archivo:
+            for bloque in respuesta.iter_content(chunk_size=8192):
+                archivo.write(bloque)
+
+        print(f"   [ÉXITO] Archivo guardado correctamente en: {ruta_archivo}")
+        return True
+
+    except requests.exceptions.RequestException as error:
+        print(f"   [ERROR] No se pudo descargar la temperatura de la NOAA. Motivo: {error}")
+        return False
 
 
 
