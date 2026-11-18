@@ -1,17 +1,25 @@
 # TEMA
 
-Análisis empírico del Balance Global del Carbono (Global Carbon Budget), evaluando la evolución histórica de las concentraciones atmosféricas de CO2 y distinguiendo cuantitativamente el impacto de las emisiones antropogénicas frente a los flujos y sumideros naturales (océanos y ecosistemas terrestres). La atmósfera se aborda bajo un enfoque de contabilidad de masas ("caja de balance"), donde se acumula de forma neta el carbono que los sumideros planetarios no logran reabsorber.
+El debate internacional en torno al calentamiento global presenta enfoques divergentes. Por un lado, las directrices europeas atribuyen el aceleramiento climático de forma directa al incremento de las emisiones de dióxido de carbono derivadas de la actividad antrópica. Por otro lado, posturas impulsadas por diversas grandes potencias argumentan un peso mayor de la variabilidad climática natural y los ciclos planetarios de largo plazo frente al impacto antrópico.
+
+Para aportar evidencia empírica a este debate, el presente estudio aborda la atmósfera bajo un estricto enfoque de contabilidad de masas ("caja de balance"). En este modelo, la atmósfera actúa como un volumen de control donde la acumulación neta de carbono representa el desequilibrio entre las emisiones totales inyectadas y la capacidad real de los sumideros planetarios (océanos y biosfera terrestre) para reabsorberlo. Mediante el cruce analítico de las series históricas de la NOAA (1958-2025), los registros globales de emisiones de la OWID y las anomalías térmicas globales, se evalúa numéricamente esta dinámica.
+
 
 # HIPOTESIS
 
-La teoría científica y los modelos del ciclo del carbono establecen que el incremento continuado del CO2 atmosférico está impulsado de forma dominante por las emisiones antropogénicas (combustibles fósiles y cambios de uso del suelo), superando la capacidad dinámica de los sumideros naturales. Este estudio contrastará empíricamente dicha premisa mediante el cruce analítico de los registros históricos de la NOAA desde 1958 (National Oceanic and Atmospheric Administration) y las series globales de emisiones humanas recogidas por la OWID (Our World in Data).
+Existe una sólida base científica que, apoyada en los modelos del ciclo del carbono, sostiene que el incremento exponencial y continuado del CO₂ atmosférico está dominado por el forzamiento antropogénico (combustibles fósiles y cambios de uso del suelo), cuya tasa de emisión supera con margen la capacidad dinámica de asimilación de los sumideros naturales.
 
-¿Qué se busca?
-- Ver la relación entre el crecimiento de la población mundial y las emisiones antropogénicas de co2.
-- Ver la relación entre el crecimiento del balance atmosférico y las emisiones antropogénicas de co2.
-- Determinar qué porcentaje del dióxido de carbono que emitimos cada año se queda efectivamente en la atmósfera.
-- Evaluar si la capacidad de absorción del planeta está aumentando al mismo ritmo que las emisiones o si muestra signos de saturación o pérdida de eficiencia. 
-- Evaluar en qué medida las emisiones antropogénicas de co2 influyen en el calentamiento global
+El presente análisis cuantitativo de los datos históricos, tiene como propósito confirmar o desmentir empíricamente si los factores determinantes de la aceleración del calentamiento global son:
+
+- El crecimiento demográfico global: correlacionar la expansión de la población mundial con el incremento absoluto de las emisiones agregadas.
+
+- Las emisiones antropogénicas directas: aislar y medir el peso específico de la quema de combustibles fósiles frente al balance global acumulado de carbono.
+
+- La deforestación y el cambio de uso del suelo: cuantificar el impacto del deterioro de la superficie forestal en la reducción de las reservas de carbono en los ecosistemas.
+
+- La saturación o pérdida de eficiencia de los sumideros naturales: evaluar si la capacidad de absorción de los océanos y los ecosistemas terrestres muestra signos de fatiga o estancamiento ante el volumen creciente de emisiones, alterando el ritmo natural del ciclo del carbono.
+
+
 
 # DATASET
 

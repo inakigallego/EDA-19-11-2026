@@ -1,6 +1,5 @@
 from pathlib import Path
-import pandas as pd
-from Funciones import (descargar_datos_noaa, descargar_owid_co2, descargar_temp_noaa, depurar_dataset)
+from Funciones import (depurar_dataset)
 
 # Ojo a las carpetas y las rutas relativas
 #path = Path("emisiones_data/noaa_co2_mensual_mlo.csv")
