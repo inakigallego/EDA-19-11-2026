@@ -382,5 +382,43 @@ def grafico6(df):
     plt.close()
 
   
+def grafico7(df):
+    fig, ax1 = plt.subplots(figsize=(12, 6)) # Es el estándar para que me ocupe la pantalla
+
+    ax1.plot(df["año"], df["co2_promedio (ppm)"], color="tab:red", linewidth=2.5, label="Balance atmosférico (ppm)")
+    ax1.plot(df["año"], df["co2_acumulado (ppm)"], color="tab:green", linestyle="-.", linewidth=2, label="CO2 acumulado emitido (ppm)")
+    ax1.plot(df["año"], df["co2 (ppm)"], color="tab:orange", linestyle="--", linewidth=1.5, label="Emisiones anuales (ppm)")
+
+    ax1.set_xlabel("Año", fontsize=12)
+    ax1.set_ylabel("Concentración y Acumulados de CO2 (ppm)", color="tab:red", fontsize=12)
+    ax1.tick_params(axis="y", labelcolor="tab:red")
+    ax1.grid(True, linestyle=":", alpha=0.6)
+
+
+    ax2 = ax1.twinx()
+    ax2.plot(df["año"], df["población"], color="tab:blue", linewidth=2, label="Población mundial")
+
+    ax2.set_ylabel("Población", color="tab:blue", fontsize=12)
+    ax2.tick_params(axis="y", labelcolor="tab:blue")
+
+
+    plt.title("Evolución Histórica: Población, Emisiones Anuales, Acumuladas y Balance Atmosférico (1958-2025)", fontsize=13, pad=15)
+
+
+    lines_1, labels_1 = ax1.get_legend_handles_labels()
+    lines_2, labels_2 = ax2.get_legend_handles_labels()
+    ax1.legend(lines_1 + lines_2, labels_1 + labels_2, loc="upper left", fontsize=10)
+
+    plt.tight_layout()
+
+    carpeta = Path("graficos")
+    carpeta.mkdir(exist_ok=True)
+            
+    ruta_imagen = carpeta / "Evolucion_histórica.png"
+    plt.savefig(ruta_imagen, dpi=300)
+    print(f"Gráfico guardado")
+    plt.show()
+
+    plt.close()
     
     
